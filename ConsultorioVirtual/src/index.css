@@ -2,10 +2,12 @@ body {
   font-family: 'Helvetica Neue', sans-serif;
 }
 
-#mainNav {
-  background-color: #9ad6e6;
+#mainNav,
+#dropdownNav {
+  background-color: #9ae6cc;
 }
 
-.Buscar {
-  background-color: #26b5e0;
+.buscar {
+  color: white;
+  background-color: #2bad82;
 }
