@@ -73,75 +73,43 @@
       </div>
     </nav>
 
-    <section id="homeSearch" class="d-flex justify-content-center">
-      <div class="d-flex flex-wrap p-5" id="searchForm">
-        <div class="p-3 me-lg-5">
-          <h1>Encuentra tu cita</h1>
-        </div>
-        <div class="d-flex p-3">
-          <form>
-            <div class="mb-3">
-              <label for="exampleInputEmail1" class="form-label"
-                >Especialidad</label
-              >
-              <input
-                type="text"
-                class="form-control"
-                placeholder="Especialidad (ej. pediatría)"
-              />
-            </div>
-            <div class="mb-3">
-              <label for="exampleInputPassword1" class="form-label"
-                >Ubicación</label
-              >
-              <input
-                type="text"
-                size="40ch"
-                class="form-control"
-                placeholder="Ubicación (Centro médico)"
-              />
-            </div>
-            <div class="d-flex justify-content-between">
-              <div class="mb-3 form-check d-flex align-items-center">
-                <input type="checkbox" class="form-check-input" />
-                <label class="form-check-label ms-2">Consulta virtual</label>
-              </div>
-              <button type="button" class="btn btn-lg m-3 buscar">
-                Buscar
-              </button>
-            </div>
-          </form>
-        </div>
+    <section id="personalDataConfirmation" class="p-5">
+      <div class="container">
+        <h1>Reservar Cita</h1>
       </div>
-    </section>
-
-    <section id="mostSearched" class="p-5">
-      <div class="container d-flex flex-column align-items-start">
-        <div>
-          <h3>Especialidades más buscadas</h3>
-        </div>
-        <div class="d-flex">
-          <button type="button" class="btn btn-lg m-3 buscar">
-            Medicina general
+      <div class="container p-3">
+        <h2>Confirma tus datos personales</h2>
+        <form>
+          <fieldset disabled>
+            <div class="mb-3 p-2">
+              <label for="disabledTextInput" class="form-label p-2 fs-4"
+                >Informacion personal*</label
+              >
+              <input
+                type="text"
+                id="disabledTextInput"
+                class="form-control"
+                placeholder="Nombres y apellidos"
+              />
+            </div>
+            <div class="mb-3 p-2">
+              <label for="disabledTextInput" class="form-label p-2 fs-4"
+                >Informacion de contacto*</label
+              >
+              <input
+                type="text"
+                id="disabledTextInput"
+                class="form-control"
+                placeholder="Número de celular"
+              />
+            </div>
+          </fieldset>
+          <button type="submit" class="btn btn-lg btn-primary">
+            Confirmar y agendar cita
           </button>
-          <button type="button" class="btn btn-lg m-3 buscar">Pediatría</button>
-          <button type="button" class="btn btn-lg m-3 buscar">Nutrición</button>
-        </div>
+        </form>
       </div>
+      <div></div>
     </section>
-
-    <section>
-      <div>
-        <a href="search.html">Resultados</a>
-      </div>
-    </section>
-
-    <section>
-      <div>
-        <a href="checkoutForm.html">Formulario de pago</a>
-      </div>
-    </section>
-
-    <script type="module" src="/src/index.js"></script>
   </body>
 </html>
