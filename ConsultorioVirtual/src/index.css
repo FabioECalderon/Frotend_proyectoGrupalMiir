@@ -3,11 +3,22 @@ body {
 }
 
 #mainNav,
+#Faqs,
 #dropdownNav {
   background-color: #9ae6cc;
 }
 
-.buscar {
+.search {
+  color: white;
+  background-color: #366153;
+}
+
+.search-2 {
   color: white;
   background-color: #2bad82;
+}
+
+.search-3 {
+  color: white;
+  background-color: #38e0a8;
 }
