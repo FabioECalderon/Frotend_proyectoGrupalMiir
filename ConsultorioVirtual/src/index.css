@@ -8,6 +8,10 @@ body {
   background-color: #9ae6cc;
 }
 
+#footer {
+  background-color: #2bad82;
+}
+
 .search {
   color: white;
   background-color: #366153;
@@ -21,4 +25,8 @@ body {
 .search-3 {
   color: white;
   background-color: #38e0a8;
+}
+
+.review-card {
+  background-color: #9ae6cc;
 }
