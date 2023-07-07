@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+      crossorigin="anonymous"
+    ></script>
+
+    <link rel="stylesheet" href="src/index.css" />
+    <link
+      href="https://fonts.cdnfonts.com/css/helvetica-neue-9"
+      rel="stylesheet"
+    />
+
+    <title>Consultorio Virtual</title>
+  </head>
+  <body>
+    <nav id="mainNav" class="p-5 navbar navbar-expand-lg">
+      <div class="container lg-col-8">
+        <a class="navbar-brand fs-3" href="#">@ Consultorio Virtual</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNavDropdown"
+          aria-controls="navbarNavDropdown"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse fs-5" id="navbarNavDropdown">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0 d-flex gap-3">
+            <li class="nav-item">
+              <a class="nav-link active me-auto" aria-current="page" href="#"
+                >Inicio</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Preguntas Frecuentes</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Iniciar sesión
+              </a>
+              <ul id="dropdownNav" class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Usuario</a></li>
+                <li><a class="dropdown-item" href="#">Administrador</a></li>
+                <li></li>
+                <li><hr class="dropdown-divider" /></li>
+                <li>
+                  <a class="dropdown-item disabled" href="#">Zona de usuario</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <section id="personalDataConfirmation" class="p-5">
+      <div class="container">
+        <h1>Reservar Cita</h1>
+      </div>
+      <div class="container p-3">
+        <h2>Confirma tus datos personales</h2>
+        <form>
+          <fieldset disabled>
+            <div class="mb-3 p-2">
+              <label for="disabledTextInput" class="form-label p-2 fs-4"
+                >Informacion personal*</label
+              >
+              <input
+                type="text"
+                id="disabledTextInput"
+                class="form-control"
+                placeholder="Nombres y apellidos"
+              />
+            </div>
+            <div class="mb-3 p-2">
+              <label for="disabledTextInput" class="form-label p-2 fs-4"
+                >Informacion de contacto*</label
+              >
+              <input
+                type="text"
+                id="disabledTextInput"
+                class="form-control"
+                placeholder="Número de celular"
+              />
+            </div>
+          </fieldset>
+          <button type="submit" class="btn btn-lg btn-primary">
+            Confirmar y agendar cita
+          </button>
+        </form>
+      </div>
+      <div></div>
+    </section>
+
+    <footer id="footer" class="p-5">
+      <div
+        class="container md-col-8 d-flex flex-column justify-content-center"
+      ></div>
+      <div class="p-md-4 d-flex flex-wrap gap-5 justify-content-center">
+        <a href="#mainNav" class="nav-link text-white">Inicio</a>
+        <a href="#homeSearch" class="nav-link text-white">Busca tu cita</a>
+        <a href="#features" class="nav-link text-white">Caracteristicas</a>
+        <a href="#reviews" class="nav-link text-white">Opiniones</a>
+        <a href="#contact" class="nav-link text-white">Contacto</a>
+      </div>
+      <div class="p-md-4 d-flex justify-content-center">
+        <span class="text-white"> © 2023 Devteam. All rights reserved.</span>
+      </div>
+    </footer>
+  </body>
+</html>

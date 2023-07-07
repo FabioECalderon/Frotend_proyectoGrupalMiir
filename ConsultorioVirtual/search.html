@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+      crossorigin="anonymous"
+    ></script>
+
+    <link rel="stylesheet" href="src/index.css" />
+    <link
+      href="https://fonts.cdnfonts.com/css/helvetica-neue-9"
+      rel="stylesheet"
+    />
+
+    <title>Consultorio Virtual</title>
+  </head>
+  <body>
+    <nav id="mainNav" class="p-5 navbar navbar-expand-lg">
+      <div class="container lg-col-8">
+        <a class="navbar-brand fs-3" href="#">@ Consultorio Virtual</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNavDropdown"
+          aria-controls="navbarNavDropdown"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse fs-5" id="navbarNavDropdown">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0 d-flex gap-3">
+            <li class="nav-item">
+              <a class="nav-link active me-auto" aria-current="page" href="#"
+                >Inicio</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Preguntas Frecuentes</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Iniciar sesión
+              </a>
+              <ul id="dropdownNav" class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Usuario</a></li>
+                <li><a class="dropdown-item" href="#">Administrador</a></li>
+                <li></li>
+                <li><hr class="dropdown-divider" /></li>
+                <li>
+                  <a class="dropdown-item disabled" href="#">Zona de usuario</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <section id="filterSearchResutls" class="">
+      <div class="container" id="resultsPage">
+        <h1 class="p-2 m-4">Especialidad, Ciudad</h1>
+      </div>
+    </section>
+
+    <section id="resultsSection" class="">
+      <div class="container-fluid">
+        <div class="container text-center">
+          <div class="row align-items-start">
+            <div class="p-0 m-2 col border">
+              <div class="container px-4 text-center">
+                <div class="row gx-5">
+                  <div class="p-1 col border">
+                    <div class="p-1">
+                      <div>
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="50"
+                          height="50"
+                          fill="currentColor"
+                          class="bi bi-person-circle"
+                          viewBox="0 0 16 16 "
+                        >
+                          <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z" />
+                          <path
+                            fill-rule="evenodd"
+                            d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"
+                          />
+                        </svg>
+                        <h4>Dr Gustavo Morales</h4>
+                        <h5>Especialidad</h5>
+                      </div>
+                      <div>
+                        <ul class="nav nav-tabs">
+                          <li class="nav-item">
+                            <a
+                              class="nav-link active"
+                              aria-current="page"
+                              href="#"
+                              >Dirección</a
+                            >
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link" href="#">Virtual</a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div>
+                      <div>
+                        <p>Avenida Siempreviva 742 <a href="#">Mapa</a></p>
+                        <p>
+                          Visita "Especialidad" <span> desde $ 100.000</span>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col border container-fluid">
+                    <div class="p-3">
+                      <table class="table">
+                        <thead>
+                          <tr>
+                            <th scope="col">Lunes</th>
+                            <th scope="col">Martes</th>
+                            <th scope="col">Miercoles</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>30 Junio</td>
+                            <td>1 Julio</td>
+                            <td>2 Julio</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                      <div>
+                        <p>Próximo dia disponible 5 de Julio, 10:00AM</p>
+                        <button
+                          type="button"
+                          class="btn btn-lg btn-light btn-sm"
+                        >
+                          Ver horarios disponibles >
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="row gx-5">
+                  <div class="p-1 col border">
+                    <div class="p-1">
+                      <div>
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="50"
+                          height="50"
+                          fill="currentColor"
+                          class="bi bi-person-circle"
+                          viewBox="0 0 16 16 "
+                        >
+                          <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z" />
+                          <path
+                            fill-rule="evenodd"
+                            d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"
+                          />
+                        </svg>
+                        <h4>Dr Gustavo Morales</h4>
+                        <h5>Especialidad</h5>
+                      </div>
+                      <div>
+                        <ul class="nav nav-tabs">
+                          <li class="nav-item">
+                            <a
+                              class="nav-link active"
+                              aria-current="page"
+                              href="#"
+                              >Dirección</a
+                            >
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link" href="#">Virtual</a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div>
+                      <div>
+                        <p>Avenida Siempreviva 742 <a href="#">Mapa</a></p>
+                        <p>
+                          Visita "Especialidad" <span> desde $ 100.000</span>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col border container-fluid">
+                    <div class="p-3">
+                      <table class="table">
+                        <thead>
+                          <tr>
+                            <th scope="col">Lunes</th>
+                            <th scope="col">Martes</th>
+                            <th scope="col">Miercoles</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>30 Junio</td>
+                            <td>1 Julio</td>
+                            <td>2 Julio</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                      <div>
+                        <p>Próximo dia disponible 5 de Julio, 10:00AM</p>
+                        <button
+                          type="button"
+                          class="btn btn-lg btn-light btn-sm"
+                        >
+                          Ver horarios disponibles >
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="row gx-5">
+                  <div class="p-1 col border">
+                    <div class="p-1">
+                      <div>
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="50"
+                          height="50"
+                          fill="currentColor"
+                          class="bi bi-person-circle"
+                          viewBox="0 0 16 16 "
+                        >
+                          <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z" />
+                          <path
+                            fill-rule="evenodd"
+                            d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"
+                          />
+                        </svg>
+                        <h4>Dr Gustavo Morales</h4>
+                        <h5>Especialidad</h5>
+                      </div>
+                      <div>
+                        <ul class="nav nav-tabs">
+                          <li class="nav-item">
+                            <a
+                              class="nav-link active"
+                              aria-current="page"
+                              href="#"
+                              >Dirección</a
+                            >
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link" href="#">Virtual</a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div>
+                      <div>
+                        <p>Avenida Siempreviva 742 <a href="#">Mapa</a></p>
+                        <p>
+                          Visita "Especialidad" <span> desde $ 100.000</span>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col border container-fluid">
+                    <div class="p-3">
+                      <table class="table">
+                        <thead>
+                          <tr>
+                            <th scope="col">Lunes</th>
+                            <th scope="col">Martes</th>
+                            <th scope="col">Miercoles</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>30 Junio</td>
+                            <td>1 Julio</td>
+                            <td>2 Julio</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                      <div>
+                        <p>Próximo dia disponible 5 de Julio, 10:00AM</p>
+                        <button
+                          type="button"
+                          class="btn btn-lg btn-light btn-sm"
+                        >
+                          Ver horarios disponibles >
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="row gx-5">
+                  <div class="p-1 col border">
+                    <div class="p-1">
+                      <div>
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="50"
+                          height="50"
+                          fill="currentColor"
+                          class="bi bi-person-circle"
+                          viewBox="0 0 16 16 "
+                        >
+                          <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z" />
+                          <path
+                            fill-rule="evenodd"
+                            d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"
+                          />
+                        </svg>
+                        <h4>Dr Gustavo Morales</h4>
+                        <h5>Especialidad</h5>
+                      </div>
+                      <div>
+                        <ul class="nav nav-tabs">
+                          <li class="nav-item">
+                            <a
+                              class="nav-link active"
+                              aria-current="page"
+                              href="#"
+                              >Dirección</a
+                            >
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link" href="#">Virtual</a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div>
+                      <div>
+                        <p>Avenida Siempreviva 742 <a href="#">Mapa</a></p>
+                        <p>
+                          Visita "Especialidad" <span> desde $ 100.000</span>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col border container-fluid">
+                    <div class="p-3">
+                      <table class="table">
+                        <thead>
+                          <tr>
+                            <th scope="col">Lunes</th>
+                            <th scope="col">Martes</th>
+                            <th scope="col">Miercoles</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>30 Junio</td>
+                            <td>1 Julio</td>
+                            <td>2 Julio</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                      <div>
+                        <p>Próximo dia disponible 5 de Julio, 10:00AM</p>
+                        <button
+                          type="button"
+                          class="btn btn-lg btn-light btn-sm"
+                        >
+                          Ver horarios disponibles >
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <img
+                src="https://i0.wp.com/imgs.hipertextual.com/wp-content/uploads/2013/10/google-maps-new-interface.jpg?fit=950%2C534&quality=50&strip=all&ssl=1"
+                class="img-fluid"
+                alt="GoogleMaps API"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer id="footer" class="p-5">
+      <div
+        class="container md-col-8 d-flex flex-column justify-content-center"
+      ></div>
+      <div class="p-md-4 d-flex flex-wrap gap-5 justify-content-center">
+        <a href="#mainNav" class="nav-link text-white">Inicio</a>
+        <a href="#homeSearch" class="nav-link text-white">Busca tu cita</a>
+        <a href="#features" class="nav-link text-white">Caracteristicas</a>
+        <a href="#reviews" class="nav-link text-white">Opiniones</a>
+        <a href="#contact" class="nav-link text-white">Contacto</a>
+      </div>
+      <div class="p-md-4 d-flex justify-content-center">
+        <span class="text-white"> © 2023 Devteam. All rights reserved.</span>
+      </div>
+    </footer>
+  </body>
+</html>
