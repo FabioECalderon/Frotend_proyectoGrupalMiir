@@ -7,7 +7,7 @@ export default function MainNav() {
   const user = 'UserName';
   return (
     <nav>
-      <Navbar expand="lg" id="top-nav" className="p-5 bg-body-primary">
+      <Navbar expand="lg" id="top-nav" className="p-5">
         <Container className="md-col-8">
           <Navbar.Brand href="" className="fs-3">
             @ Consultorio Virtual
