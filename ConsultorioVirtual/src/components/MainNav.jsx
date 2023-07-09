@@ -7,7 +7,7 @@ export default function MainNav() {
   const user = 'UserName';
   return (
     <nav>
-      <Navbar expand="lg" id="top-nav" className="p-5">
+      <Navbar expand="lg" id="top-nav" className="p-5 bg-body-primary">
         <Container className="md-col-8">
           <Navbar.Brand href="" className="fs-3">
             @ Consultorio Virtual
@@ -23,6 +23,7 @@ export default function MainNav() {
                 bg="dark"
                 title={user ? `Hola ${user}` : 'Iniciar sesión'}
                 id="main-nav-dropdown"
+                menuVariant="light"
               >
                 <Container>
                   <NavDropdown.Item href="#">Usuario</NavDropdown.Item>
