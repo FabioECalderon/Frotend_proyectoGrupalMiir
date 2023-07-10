@@ -2,9 +2,9 @@ body {
   font-family: 'Helvetica Neue', sans-serif;
 }
 
-#mainNav,
-#Faqs,
-#dropdownNav {
+#top-nav,
+#main-nav-dropdown,
+#Faqs {
   background-color: #9ae6cc;
 }
 
