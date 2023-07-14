@@ -1,7 +1,7 @@
 export default function Home() {
   return (
     <>
-      <section id="homeSearch" className="d-flex justify-content-center">
+      <section id="search" className="d-flex justify-content-center">
         <div className="d-flex flex-wrap p-5" id="searchForm">
           <div className="p-3 me-lg-5">
             <h1>Encuentra tu cita</h1>
@@ -189,10 +189,10 @@ export default function Home() {
               <div className="card text-center h-100">
                 <div className="card-body d-flex flex-column align-items-center review-card">
                   <p className="card-text w-50">
-                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                     Nulla quam velit, vulputate eu pharetra nec, mattis ac
                     neque. Duis vulputate commodo lectus, ac blandit elit
-                    tincidunt id."
+                    tincidunt id.
                   </p>
                   <img
                     src="https://placehold.co/80x80"
@@ -270,33 +270,6 @@ export default function Home() {
           </form>
         </div>
       </section>
-
-      <footer id="footer" className="p-5">
-        <div className="container md-col-8 d-flex flex-column justify-content-center"></div>
-        <div className="p-md-4 d-flex flex-wrap gap-5 justify-content-center">
-          <a href="#mainNav" className="nav-link text-white">
-            Inicio
-          </a>
-          <a href="#homeSearch" className="nav-link text-white">
-            Busca tu cita
-          </a>
-          <a href="#features" className="nav-link text-white">
-            Caracteristicas
-          </a>
-          <a href="#reviews" className="nav-link text-white">
-            Opiniones
-          </a>
-          <a href="#contact" className="nav-link text-white">
-            Contacto
-          </a>
-        </div>
-        <div className="p-md-4 d-flex justify-content-center">
-          <span className="text-white">
-            {' '}
-            © 2023 Devteam. All rights reserved.
-          </span>
-        </div>
-      </footer>
     </>
   );
 }
