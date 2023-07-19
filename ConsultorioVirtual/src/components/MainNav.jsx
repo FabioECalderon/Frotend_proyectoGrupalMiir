@@ -5,12 +5,17 @@ import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import { NavLink } from 'react-router-dom';
 import UserContext from '../containers/UserContext';
+import { useNavigate } from 'react-router-dom';
 
 export default function MainNav() {
+  const navigate = useNavigate();
   const { user, setUser } = useContext(UserContext);
 
   function LogOut() {
-    setUser(null);
+    setTimeout(() => {
+      setUser(() => null);
+      navigate('/home');
+    }, 100);
   }
 
   return (
@@ -30,20 +35,20 @@ export default function MainNav() {
                 Preguntas Frecuentes
               </NavLink>
               <NavDropdown
-                title={user ? `Hola ${user}` : 'Iniciar sesión'}
+                title={user ? `Hola ${user.email}` : 'Iniciar sesión'}
                 id="main-nav-dropdown"
               >
-                <NavLink to="/login" className="dropdown-item">
+                <NavLink to="/login" className="dropdown-item" disabled={user}>
                   Usuario
                 </NavLink>
-                <NavLink to="/login" className="dropdown-item">
+                <NavLink to="/login" className="dropdown-item" disabled={user}>
                   Administrador
                 </NavLink>
                 <NavDropdown.Divider />
-                <NavLink to="/user" className="dropdown-item">
+                <NavLink to="/user" className="dropdown-item" disabled={!user}>
                   Zona de usuario
                 </NavLink>
-                <NavLink to="/admin" className="dropdown-item">
+                <NavLink to="/admin" className="dropdown-item" disabled={!user}>
                   Zona de Admin
                 </NavLink>
                 <NavLink onClick={LogOut} className="dropdown-item">
