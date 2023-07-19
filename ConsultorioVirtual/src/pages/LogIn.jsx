@@ -1,3 +1,4 @@
+import { useContext } from 'react';
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
 import Col from 'react-bootstrap/Col';
@@ -5,6 +6,8 @@ import Row from 'react-bootstrap/Row';
 import { Formik, ErrorMessage } from 'formik';
 import { z } from 'zod';
 import { toFormikValidationSchema } from 'zod-formik-adapter';
+import UserContext from '../containers/UserContext';
+import { useNavigate } from 'react-router-dom';
 
 const signInSchema = z.object({
   email: z.string().email('El email no es válido'),
@@ -15,6 +18,9 @@ const signInSchema = z.object({
 });
 
 export default function LogIn() {
+  const navigate = useNavigate();
+  const { setUser } = useContext(UserContext);
+
   const initialValues = {
     email: '',
     password: '',
@@ -24,14 +30,15 @@ export default function LogIn() {
       <Row className="Container">
         <Col />
         <Col md={6}>
-          <h1 className="fs-4 my-5">Ingresa a tu cuenta</h1>
+          <h1 className="fs-4 my-5 mx-3">Ingresa a tu cuenta</h1>
           <Formik
             initialValues={initialValues}
             onSubmit={(values, { setSubmitting }) => {
               setTimeout(() => {
-                console.log(JSON.stringify(values, null, 2));
+                setUser({ email: values.email });
                 setSubmitting(false);
-              }, 1000);
+                navigate('/home');
+              }, 100);
             }}
             validationSchema={toFormikValidationSchema(signInSchema)}
           >
@@ -44,7 +51,7 @@ export default function LogIn() {
               handleSubmit,
               isSubmitting,
             }) => (
-              <Form onSubmit={handleSubmit}>
+              <Form className="m-3" onSubmit={handleSubmit}>
                 <Form.Group className="mb-3">
                   <Form.Label>Ingresa tu email:</Form.Label>
                   <Form.Control
