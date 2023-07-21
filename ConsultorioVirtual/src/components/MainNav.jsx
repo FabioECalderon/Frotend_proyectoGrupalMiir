@@ -40,10 +40,12 @@ export default function MainNav() {
                 }
                 id="main-nav-dropdown"
               >
-                <img
-                  src="https://placehold.co/80x80"
-                  className="rounded-circle mx-5 p-3"
-                />
+                {user && (
+                  <img
+                    src="https://placehold.co/80x80"
+                    className="rounded-circle mx-5 p-3"
+                  />
+                )}
                 {!user && (
                   <>
                     <NavLink to="/login" className="dropdown-item">

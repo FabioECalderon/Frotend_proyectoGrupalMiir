@@ -13,6 +13,7 @@ import AdminCenters from './pages/AdminCenters';
 import AdminSpecialties from './pages/AdminSpecialties';
 import AdminMedics from './pages/AdminMedics';
 import AdminUsers from './pages/AdminUsers';
+import PasswordRestore from './pages/PasswordRestore';
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
           <Route path="/home" element={<Home />} />
           <Route path="/faqs" element={<Faqs />} />
           <Route path="/login" element={<LogIn />} />
+          <Route path="/restore" element={<PasswordRestore />} />
           <Route path="/admin">
             <Route
               index
