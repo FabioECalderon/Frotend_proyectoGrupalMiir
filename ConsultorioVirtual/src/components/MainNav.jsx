@@ -27,7 +27,7 @@ export default function MainNav() {
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="main-navbar" />
           <Navbar.Collapse id="main-navbar">
-            <Nav className="ms-auto fs-5 d-flex gap-3 align-items-center">
+            <Nav className="ms-auto fs-5 d-flex gap-3">
               <NavLink to="/home" className="me-auto nav-link">
                 Inicio
               </NavLink>
@@ -36,21 +36,14 @@ export default function MainNav() {
               </NavLink>
               <NavDropdown
                 title={
-                  user ? (
-                    <>
-                      {' '}
-                      <span> Hola {user.email} </span>
-                      <img
-                        src="https://placehold.co/40x40"
-                        className="rounded-circle"
-                      />
-                    </>
-                  ) : (
-                    'Zona de usuario'
-                  )
+                  user ? <span> Hola {user.email} </span> : 'Zona de usuario'
                 }
                 id="main-nav-dropdown"
               >
+                <img
+                  src="https://placehold.co/80x80"
+                  className="rounded-circle mx-5 p-3"
+                />
                 {!user && (
                   <>
                     <NavLink to="/login" className="dropdown-item">
