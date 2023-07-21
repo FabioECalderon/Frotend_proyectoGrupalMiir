@@ -13,14 +13,14 @@ export default function MainNav() {
 
   function LogOut() {
     setTimeout(() => {
-      setUser(() => null);
+      setUser((user) => null);
       navigate('/home');
     }, 100);
   }
 
   return (
     <nav>
-      <Navbar expand="lg" id="top-nav" className="p-5">
+      <Navbar expand="lg" id="top-nav" className="py-3">
         <Container className="md-col-8">
           <Navbar.Brand href="" className="fs-3">
             @ Consultorio Virtual
@@ -35,24 +35,55 @@ export default function MainNav() {
                 Preguntas Frecuentes
               </NavLink>
               <NavDropdown
-                title={user ? `Hola ${user.email}` : 'Iniciar sesión'}
+                title={
+                  user ? <span> Hola {user.email} </span> : 'Zona de usuario'
+                }
                 id="main-nav-dropdown"
               >
-                <NavLink to="/login" className="dropdown-item" disabled={user}>
-                  Usuario
-                </NavLink>
-                <NavLink to="/login" className="dropdown-item" disabled={user}>
-                  Administrador
-                </NavLink>
+                {user && (
+                  <img
+                    src="https://placehold.co/80x80"
+                    className="rounded-circle mx-5 p-3"
+                  />
+                )}
+                {!user && (
+                  <>
+                    <NavLink to="/login" className="dropdown-item">
+                      Iniciar sesión
+                    </NavLink>
+                    <Nav.Link className="ms-2" disabled>
+                      Configurar cuenta
+                    </Nav.Link>
+                  </>
+                )}
+                {user && (
+                  <>
+                    <NavLink to="/user" className="dropdown-item">
+                      Zona de usuario
+                    </NavLink>
+                    <NavLink to="/user" className="dropdown-item">
+                      Configurar cuenta
+                    </NavLink>
+                    <NavLink to="/user/appointments" className="dropdown-item">
+                      Mis citas
+                    </NavLink>
+                    {user && user.isAdmin && (
+                      <>
+                        <NavDropdown.Divider />
+                        <NavLink
+                          to="/admin"
+                          className="dropdown-item"
+                          {...(user ? '' : 'disabled')}
+                        >
+                          Zona de Administrador
+                        </NavLink>
+                      </>
+                    )}
+                  </>
+                )}
                 <NavDropdown.Divider />
-                <NavLink to="/user" className="dropdown-item" disabled={!user}>
-                  Zona de usuario
-                </NavLink>
-                <NavLink to="/admin" className="dropdown-item" disabled={!user}>
-                  Zona de Admin
-                </NavLink>
                 <NavLink onClick={LogOut} className="dropdown-item">
-                  Salir
+                  Cerrar sesión
                 </NavLink>
               </NavDropdown>
             </Nav>

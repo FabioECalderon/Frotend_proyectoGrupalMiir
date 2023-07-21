@@ -1,4 +1,4 @@
-import { useContext } from 'react';
+import { useState } from 'react';
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
 import Col from 'react-bootstrap/Col';
@@ -6,38 +6,60 @@ import Row from 'react-bootstrap/Row';
 import { Formik, ErrorMessage } from 'formik';
 import { z } from 'zod';
 import { toFormikValidationSchema } from 'zod-formik-adapter';
-import UserContext from '../containers/UserContext';
-import { useNavigate, NavLink } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 const signInSchema = z.object({
   email: z.string().email('El email no es válido'),
-  password: z
-    .string()
-    .min(6, 'La contraseña debe tener al menos 6 caracteres')
-    .max(16, 'La contraseña debe tener menos de 16 caracteres'),
 });
 
-export default function LogIn() {
+export default function PasswordRestore() {
+  const [formSent, setFormSent] = useState(false);
   const navigate = useNavigate();
-  const { setUser } = useContext(UserContext);
 
   const initialValues = {
     email: '',
-    password: '',
   };
+
+  function handleOK() {
+    setTimeout(() => {
+      navigate('/login');
+    }, 100);
+  }
+
   return (
     <>
       <Row className="Container">
         <Col />
         <Col md={6} lg={5} xl={4}>
-          <h1 className="fs-4 my-5 mx-3">Ingresa a tu cuenta</h1>
+          <h1 className="fs-4 my-5 mx-3">Introduce tu dirección de email</h1>
+          {!formSent ? (
+            <h4 className="fs-6 my-5 mx-3">
+              Te enviaremos un mensaje con un enlace para que puedas crear tu
+              nueva contraseña.
+            </h4>
+          ) : (
+            <>
+              <h4 className="text-danger fs-6 my-5 mx-3">
+                Hemos enviado un mensaje con un enlace para que puedas crear tu
+                nueva contraseña.
+              </h4>
+              <Form.Group className="m-3 d-flex">
+                <Button
+                  variant="primary"
+                  type="button"
+                  className="text-white px-4 mb-5 flex-grow-1"
+                  onClick={handleOK}
+                >
+                  OK
+                </Button>
+              </Form.Group>
+            </>
+          )}
           <Formik
             initialValues={initialValues}
-            onSubmit={(values, { setSubmitting }) => {
+            onSubmit={(values) => {
               setTimeout(() => {
-                setUser({ email: values.email, isAdmin: true });
-                setSubmitting(false);
-                navigate('/home');
+                setFormSent(true);
               }, 100);
             }}
             validationSchema={toFormikValidationSchema(signInSchema)}
@@ -71,34 +93,6 @@ export default function LogIn() {
                     className="invalid-feedback"
                   />
                 </Form.Group>
-
-                <Form.Group className="mb-4">
-                  <Form.Label>Ingresa tu contraseña:</Form.Label>
-                  <Form.Control
-                    type="password"
-                    placeholder="Contraseña"
-                    name="password"
-                    onChange={handleChange}
-                    onBlur={handleBlur}
-                    value={values.password}
-                    className={
-                      touched.password && errors.password ? 'is-invalid' : ''
-                    }
-                  />
-                  <ErrorMessage
-                    name="password"
-                    component="div"
-                    className="invalid-feedback"
-                  />
-                </Form.Group>
-                <Form.Group className=" d-flex">
-                  <NavLink
-                    to="/restore"
-                    className="text-black mb-5 flex-grow-1"
-                  >
-                    Recuperar contraseña?
-                  </NavLink>
-                </Form.Group>
                 <Form.Group className="d-flex">
                   <Button
                     variant="primary"
@@ -106,7 +100,7 @@ export default function LogIn() {
                     className="text-white px-4 mb-5 flex-grow-1"
                     disabled={isSubmitting}
                   >
-                    Iniciar sesión
+                    Enviar
                   </Button>
                 </Form.Group>
               </Form>
