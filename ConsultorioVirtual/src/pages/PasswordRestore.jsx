@@ -31,7 +31,7 @@ export default function PasswordRestore() {
       <Row className="Container">
         <Col />
         <Col md={6} lg={5} xl={4}>
-          <h1 className="fs-4 my-5 mx-3">Introduce tu direccición de email</h1>
+          <h1 className="fs-4 my-5 mx-3">Introduce tu dirección de email</h1>
           {!formSent ? (
             <h4 className="fs-6 my-5 mx-3">
               Te enviaremos un mensaje con un enlace para que puedas crear tu
