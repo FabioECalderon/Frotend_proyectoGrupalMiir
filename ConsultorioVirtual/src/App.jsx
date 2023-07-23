@@ -9,11 +9,13 @@ import Home from './pages/Home';
 import Faqs from './pages/Faqs';
 import Admin from './pages/Admin';
 import LogIn from './pages/LogIn';
+import SearchResults from './pages/SearchResults';
 import AdminCenters from './pages/AdminCenters';
 import AdminSpecialties from './pages/AdminSpecialties';
 import AdminMedics from './pages/AdminMedics';
 import AdminUsers from './pages/AdminUsers';
 import PasswordRestore from './pages/PasswordRestore';
+import CheckoutForm from './pages/checkoutForm';
 
 function App() {
   return (
@@ -25,6 +27,9 @@ function App() {
           <Route path="/faqs" element={<Faqs />} />
           <Route path="/login" element={<LogIn />} />
           <Route path="/restore" element={<PasswordRestore />} />
+          <Route path="/searchResults" element={<SearchResults />} />
+          <Route path="/checkoutForm" element={<CheckoutForm />} />
+
           <Route path="/admin">
             <Route
               index
