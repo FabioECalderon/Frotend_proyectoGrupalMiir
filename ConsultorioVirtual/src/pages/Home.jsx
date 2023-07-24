@@ -1,3 +1,4 @@
+import { NavLink } from 'react-router-dom';
 export default function Home() {
   return (
     <>
@@ -32,9 +33,12 @@ export default function Home() {
                     Consulta virtual
                   </label>
                 </div>
-                <button type="button" className="btn btn-lg m-3 search">
-                  Buscar
-                </button>
+
+                <NavLink to="/searchResults" className="nav-link">
+                  <button type="button" className="btn btn-lg m-3 search">
+                    Buscar
+                  </button>
+                </NavLink>
               </div>
             </form>
           </div>
