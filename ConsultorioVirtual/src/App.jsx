@@ -9,6 +9,7 @@ import Home from './pages/Home';
 import Faqs from './pages/Faqs';
 import Admin from './pages/Admin';
 import LogIn from './pages/LogIn';
+import SearchResults from './pages/SearchResults';
 import AdminCenters from './pages/AdminCenters';
 import AdminSpecialties from './pages/AdminSpecialties';
 import AdminMedics from './pages/AdminMedics';
