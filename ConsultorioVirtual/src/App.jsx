@@ -28,52 +28,53 @@ function App() {
         <Routes>
           <Route path="/home" element={<Home />} />
           <Route path="/faqs" element={<Faqs />} />
+          <Route path="/searchResults" element={<SearchResults />} />
           <Route path="/login" element={<LogIn />} />
           <Route path="/restore" element={<PasswordRestore />} />
 
-          <Route path='/user'>
-            <Route 
-              index 
+          <Route path="/user">
+            <Route
+              index
               element={
                 <ProtectedRoute>
-                  <User/>
-                </ProtectedRoute>
-              }
-            /> 
-            <Route 
-              path='configuration' 
-              element={
-                <ProtectedRoute>
-                  <UserConfiguration/>
+                  <User />
                 </ProtectedRoute>
               }
             />
-            <Route 
-              path='savedspecialists' 
+            <Route
+              path="configuration"
               element={
                 <ProtectedRoute>
-                  <SavedSpecilists/>
+                  <UserConfiguration />
                 </ProtectedRoute>
               }
             />
-            <Route 
-              path='faqs' 
+            <Route
+              path="savedspecialists"
               element={
                 <ProtectedRoute>
-                  <Faqs/>
+                  <SavedSpecilists />
                 </ProtectedRoute>
               }
             />
-            <Route 
-              path='citas' 
+            <Route
+              path="faqs"
               element={
                 <ProtectedRoute>
-                  <Appointments/>
+                  <Faqs />
+                </ProtectedRoute>
+              }
+            />
+            <Route
+              path="citas"
+              element={
+                <ProtectedRoute>
+                  <Appointments />
                 </ProtectedRoute>
               }
             />
           </Route>
-          
+
           <Route path="/admin">
             <Route
               index

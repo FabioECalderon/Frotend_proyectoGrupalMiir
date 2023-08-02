@@ -1,12 +1,17 @@
-# Frotend_proyectoGrupalMir
+# Frontend_proyectoGrupalMir
 
-Repositorio del proyecto Consultrio Virtual. Make it real top 28
+Repository for Medical centers site front-end.
+Bootcamp: Make it real top 28
 
-Librerias:
-Bootstrap
+Libraries:
+React
 React-Bootstrap
-Formik
-Zod
-Emotions
+@emotions
+React-router-dom
+Formik, Zod and zod-formik-adapter
 
-Cuando ejecutes este proyecto no te olvides de instalar el zod-formik-adapter que es el encargado de añadir el 'schema' el cual trabajara con la propiedad 'validationSchema'/'validate' de Formik
+Development libraries:
+Vite
+Eslint
+Sass
+Faker
